@@ -1,37 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 620">
 <defs>
- <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9FD9FF"/><stop offset=".48" stop-color="#3D6BF5"/><stop offset="1" stop-color="#173DB5"/></linearGradient>
- <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#E6ECF8"/><stop offset=".45" stop-color="#95A1B8"/><stop offset=".72" stop-color="#F8FAFD"/><stop offset="1" stop-color="#2F3A52"/></linearGradient>
- <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#0E1624" flood-opacity=".18"/></filter>
+ <linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#D9E1EE"/></linearGradient>
+ <linearGradient id="sideL" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#BCE6FF"/><stop offset="1" stop-color="#86CBF5"/></linearGradient>
+ <linearGradient id="sideR" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5CC8FF"/><stop offset="1" stop-color="#2E9BE0"/></linearGradient>
+ <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4A556B"/><stop offset=".3" stop-color="#DDE4F0"/><stop offset=".42" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#9AA6BA"/><stop offset="1" stop-color="#3B4558"/></linearGradient>
+ <linearGradient id="chromeH" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4A556B"/><stop offset=".3" stop-color="#DDE4F0"/><stop offset=".42" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#9AA6BA"/><stop offset="1" stop-color="#3B4558"/></linearGradient>
+ <linearGradient id="cylBlue" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#0B2270"/><stop offset=".32" stop-color="#3D6BF5"/><stop offset=".45" stop-color="#8FB0FF"/><stop offset=".7" stop-color="#1F4FE0"/><stop offset="1" stop-color="#0B2270"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5CC8FF" stop-opacity=".75"/><stop offset=".35" stop-color="#DDF3FF" stop-opacity=".55"/><stop offset=".7" stop-color="#9FD9FF" stop-opacity=".45"/><stop offset="1" stop-color="#2E9BE0" stop-opacity=".8"/></linearGradient>
+ <linearGradient id="headTop" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#3D6BF5"/><stop offset="1" stop-color="#0F2A80"/></linearGradient>
+ <linearGradient id="cylOrange" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#B84500"/><stop offset=".3" stop-color="#FFB27A"/><stop offset=".45" stop-color="#FFD9BD"/><stop offset=".7" stop-color="#FF8A33"/><stop offset="1" stop-color="#A63E00"/></linearGradient>
+ <linearGradient id="orangeV" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#C24E03"/><stop offset=".4" stop-color="#FFA257"/><stop offset="1" stop-color="#D65200"/></linearGradient>
+ <linearGradient id="dark" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#1B2334"/><stop offset=".4" stop-color="#46526B"/><stop offset="1" stop-color="#1B2334"/></linearGradient>
+ <radialGradient id="disc" cx=".38" cy=".32" r=".8"><stop stop-color="#5E86FF"/><stop offset=".55" stop-color="#1F4FE0"/><stop offset="1" stop-color="#0B2270"/></radialGradient>
+ <radialGradient id="blade" cx=".3" cy=".3" r="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#7FC8F5"/></radialGradient>
+ <radialGradient id="hub" cx=".35" cy=".3" r=".8"><stop stop-color="#FFFFFF"/><stop offset=".6" stop-color="#C9D2E3"/><stop offset="1" stop-color="#6B7790"/></radialGradient>
+ <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+ <filter id="drop" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#0E1624" flood-opacity=".2"/></filter>
 </defs>
-<!-- isometric base -->
-<g filter="url(#shadow)">
- <path d="M62 430 215 342l165 94-157 91z" fill="#E6ECF8"/>
- <path d="M62 430v32l161 94v-29z" fill="#9FD9FF"/>
- <path d="M223 527v29l157-91v-29z" fill="#5CC8FF"/>
+<!-- base isométrica con volumen -->
+<g filter="url(#drop)">
+ <path d="M62 430 215 342l165 94-157 91z" fill="url(#top)"/>
+ <path d="M62 430v32l161 94v-29z" fill="url(#sideL)"/>
+ <path d="M223 527v29l157-91v-29z" fill="url(#sideR)"/>
+ <path d="M62 430 215 342l165 94" fill="none" stroke="#fff" stroke-width="2.5" stroke-opacity=".9"/>
+ <path d="M62 430l161 97 157-91" fill="none" stroke="#fff" stroke-width="1.5" stroke-opacity=".6"/>
 </g>
-<!-- motor turbine, fully contained -->
-<g transform="translate(70 270)">
- <circle cx="92" cy="92" r="78" fill="#0F2A80" stroke="#1F4FE0" stroke-width="7"/>
- <circle cx="92" cy="92" r="52" fill="#2A5BE8"/>
- <circle cx="92" cy="92" r="23" fill="#E6ECF8"/>
- <g fill="#9FD9FF">
-  <path d="M92 45c19 0 31 9 37 20l-26 17z"/><path d="M139 92c0 19-9 31-20 37l-17-26z"/>
-  <path d="M92 139c-19 0-31-9-37-20l26-17z"/><path d="M45 92c0-19 9-31 20-37l17 26z"/>
+<!-- sombras de contacto -->
+<ellipse cx="190" cy="452" rx="82" ry="20" fill="#0E1624" opacity=".22" filter="url(#soft)" transform="rotate(-14 190 452)"/>
+<ellipse cx="290" cy="470" rx="62" ry="9" fill="#0E1624" opacity=".25" filter="url(#soft)" transform="rotate(-30 290 470)"/>
+<!-- aspiradora escoba sin cable -->
+<g transform="translate(185 432) rotate(-14)" stroke-linejoin="round">
+ <rect x="-72" y="-12" width="144" height="40" rx="20" fill="#081A55"/>
+ <rect x="-72" y="-24" width="144" height="42" rx="20" fill="url(#headTop)"/>
+ <path d="M-56 -20h112" stroke="#8FB0FF" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+ <rect x="-58" y="-8" width="116" height="14" rx="7" fill="#0B2270"/>
+ <rect x="-56" y="-7" width="112" height="9" rx="4.5" fill="#5CC8FF"/>
+ <path d="M-48 -5h96" stroke="#DDF3FF" stroke-width="2" stroke-linecap="round"/>
+ <rect x="-9" y="-252" width="18" height="236" rx="9" fill="url(#chrome)"/>
+ <path d="M-2 -246v220" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+ <path d="M22 -390h38a14 14 0 0 1 14 14v62a14 14 0 0 1-14 14h-8" fill="none" stroke="#081A55" stroke-width="16" stroke-linecap="round"/>
+ <path d="M22 -392h37a13 13 0 0 1 13 13v60" fill="none" stroke="#3D6BF5" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+ <rect x="36" y="-302" width="38" height="58" rx="10" fill="url(#dark)"/>
+ <rect x="42" y="-292" width="26" height="36" rx="5" fill="#0E1624"/>
+ <rect x="46" y="-288" width="18" height="7" rx="2" fill="#5CC8FF"/><rect x="46" y="-278" width="18" height="7" rx="2" fill="#5CC8FF"/><rect x="46" y="-268" width="18" height="7" rx="2" fill="#5CC8FF" opacity=".35"/>
+ <rect x="26" y="-366" width="11" height="26" rx="5" fill="url(#orangeV)"/>
+ <rect x="-27" y="-406" width="54" height="52" rx="16" fill="url(#cylBlue)"/>
+ <path d="M-15 -396v30M-5 -396v30M5 -396v30M15 -396v30" stroke="#0B2270" stroke-width="3.5" stroke-linecap="round" opacity=".7"/>
+ <path d="M-14 -396v30M-4 -396v30M6 -396v30M16 -396v30" stroke="#BFD2FF" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+ <rect x="-41" y="-366" width="82" height="30" rx="12" fill="url(#cylBlue)"/>
+ <path d="M-34 -360h68" stroke="#DCE6FF" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>
+ <rect x="-35" y="-338" width="70" height="102" rx="24" fill="url(#glass)" stroke="#1F4FE0" stroke-width="3"/>
+ <path d="M-18 -330h36l-10 72h-16z" fill="#FFFFFF" opacity=".35"/>
+ <path d="M-22 -318q22 12 44 0M-20 -300q20 11 40 0M-18 -282q18 10 36 0" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+ <rect x="-27" y="-330" width="7" height="84" rx="3.5" fill="#fff" opacity=".75"/>
+ <rect x="-35" y="-258" width="70" height="20" rx="10" fill="#1F4FE0" opacity=".55"/>
+</g>
+<!-- motor digital desmontado -->
+<g transform="translate(338 236)">
+ <path d="M-6 56 -44 118" stroke="#95A1B8" stroke-width="3" stroke-dasharray="6 7" stroke-linecap="round"/>
+ <ellipse cx="4" cy="8" rx="48" ry="48" fill="#081A55"/>
+ <circle r="48" fill="url(#disc)"/>
+ <circle r="48" fill="none" stroke="#8FB0FF" stroke-width="2" stroke-dasharray="80 222" transform="rotate(-150)" opacity=".9"/>
+ <circle r="34" fill="#0B2270"/>
+ <circle r="34" fill="none" stroke="#3D6BF5" stroke-width="2"/>
+ <g fill="url(#blade)" stroke="#2E9BE0" stroke-width="1">
+  <path id="bl" d="M0-32c11 2 17 10 17 19L5-6z"/>
+  <use href="#bl" transform="rotate(45)"/><use href="#bl" transform="rotate(90)"/><use href="#bl" transform="rotate(135)"/>
+  <use href="#bl" transform="rotate(180)"/><use href="#bl" transform="rotate(225)"/><use href="#bl" transform="rotate(270)"/><use href="#bl" transform="rotate(315)"/>
  </g>
+ <circle r="10" fill="url(#hub)" stroke="#3B4558" stroke-width="1.5"/>
+ <circle cx="-3" cy="-3" r="3" fill="#fff"/>
 </g>
-<!-- screwdriver / repair tool -->
-<g transform="translate(188 80) rotate(13 80 190)">
- <path d="M74 15h32l8 34-13 20H79L66 49z" fill="#1F4FE0" stroke="#0F2A80" stroke-width="5"/>
- <rect x="71" y="58" width="38" height="250" rx="18" fill="url(#metal)" stroke="#173DB5" stroke-width="5"/>
- <rect x="58" y="265" width="64" height="130" rx="27" fill="url(#blue)" stroke="#0F2A80" stroke-width="6"/>
- <path d="M77 286h26" stroke="#E6ECF8" stroke-width="7" stroke-linecap="round"/>
- <path d="M77 312h26" stroke="#E6ECF8" stroke-width="7" stroke-linecap="round"/>
-</g>
-<!-- small circuit component -->
-<g transform="translate(270 360) rotate(-9)">
- <rect width="104" height="78" rx="12" fill="#2A5BE8" stroke="#9FD9FF" stroke-width="4"/>
- <rect x="17" y="17" width="35" height="27" rx="4" fill="#E6ECF8"/>
- <path d="M52 30h33M25 55h60" stroke="#5CC8FF" stroke-width="5"/>
+<!-- destornillador con mango naranja -->
+<g transform="translate(232 486) rotate(-30)">
+ <rect x="0" y="-12" width="66" height="26" rx="13" fill="#8A3300"/>
+ <rect x="0" y="-14" width="66" height="26" rx="13" fill="url(#cylOrange)"/>
+ <path d="M16 -8v14M30 -8v14M44 -8v14" stroke="#A63E00" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+ <rect x="64" y="-5" width="58" height="10" rx="4" fill="url(#chromeH)"/>
+ <path d="M122 -5l13 5-13 5z" fill="#4A556B"/>
 </g>
 </svg>
